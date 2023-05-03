@@ -1,0 +1,86 @@
+<div class="toolModal-content">
+  <div class="tabBox w-100">
+    <div id="mainListLink" data-open-tab="mainListLink" data-open-tab-container="listsModal" class="tabLinks flex-basis-auto active">📥"à traiter" <span class="itemCount"></span></div>
+    <div id="sideListLink" data-open-tab="sideListLink" data-open-tab-container="listsModal" class="tabLinks flex-basis-auto">📦"en stock" <span class="itemCount"></span></div>
+    <div id="doneListLink" data-open-tab="doneListLink" data-open-tab-container="listsModal" class="tabLinks flex-basis-auto">✅traités</div>
+    <span class="close-modal bg-primary-dark px-2" id="close-modal">&times;</span>
+  </div>
+  <div aria-labelledby="mainListLink" class="tabContent px-0" style="display: block;">
+    <div class="d-flex justify-content-around text-sm">
+      <div class="cursor-pointer border-radius bg-light-grey p-1 list-modify-button" data-list-name="mainList">📝 éditer la liste</div>
+      <div>
+        <input type="checkbox" class="d-none list-check-all-button" data-list-name="mainList">
+      </div>
+      <div class="cursor-pointer border-radius  p-1 list-back-button d-none" data-list-name="mainList">&#8656; revenir</div>
+      <div class="cursor-pointer border-radius bg-gray-600 text-white p-1 list-delete-button d-none" data-list-name="mainList">🗑️ supprimer</div>
+      <div class="cursor-pointer border-radius bg-gray-600 text-white p-1 list-changelist-button d-none" data-list-name="mainList">➡️ vers "en stock"</div>
+      <div class="cursor-pointer border-radius bg-light-grey p-1 list-move-button" data-list-name="mainList">⬆️⬇️ déplacer </div>
+      <div class="cursor-pointer border-radius bg-info text-white px-2 py-1 list-legend-button" data-list-name="mainList">Légende </div>
+    </div>
+    <div id="mainListContent" class="listContent pb-3">
+      <div class="d-none flex-column manage-list-shortcut">
+        <div class="mt-4 pt-4 pb-2 font-weight-bold h5 text-center">-- Liste vide --</div>
+        <div class="mt-4 mb-2 font-weight-bold h5 text-center">Mettez dans cette liste les articles <br> à republier</div>
+        <div class="text-center">
+          <span class="mt-1 mx-2 btn btn-xs btn-primary" role="button" >
+            <img class="font-icon text-white align-middle mr-2 vinz-image" data-image-name="list-solid.svg">
+            Remplir mes listes
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="d-none justify-content-center" id="repost-shortcut">
+      <span class="mx-2 btn btn-xs btn-primary" role="button" >
+        <img class="font-icon text-white align-middle mr-2 vinz-image" data-image-name="sync-alt-solid.svg">
+        Aller vers "Republier" 
+      </span>
+    </div>
+  </div>
+
+  <div aria-labelledby="sideListLink" class="tabContent px-0" style="display: none; ">
+    <div class="d-flex justify-content-around text-sm">
+      <div>
+        <input type="checkbox" class="list-check-all-button" data-list-name="sideList">
+      </div>
+      <div class="cursor-pointer border-radius bg-light-grey p-1 list-delete-button" data-list-name="sideList">🗑️ supprimer</div>
+      <div class="cursor-pointer border-radius bg-light-grey p-1 list-changelist-button" data-list-name="sideList">⬅️ vers "à traiter"</div>
+      <div class="cursor-pointer border-radius bg-light-grey p-1 list-move-button" data-list-name="sideList">⬆️⬇️ déplacer </div>
+    </div>
+    <div id="sideListContent" class="listContent">
+      <div class="d-none flex-column manage-list-shortcut">
+        <div class="mt-4 pt-4 pb-2 font-weight-bold h5 text-center">-- Liste vide --</div>
+        <div class="mt-4 mb-2 font-weight-bold h5 text-center">Mettez dans cette liste vos articles <br> à traiter plus tard</div>
+        <div class="text-center">
+          <span class="mt-1 mx-2 btn btn-xs btn-primary" role="button" >
+            <img class="font-icon text-white align-middle mr-2 vinz-image" data-image-name="list-solid.svg">
+            Remplir mes listes
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div aria-labelledby="doneListLink" class="tabContent px-0" style="display: none;">
+    <div class="d-flex justify-content-end text-sm">
+      <div class="cursor-pointer border-radius bg-light-grey p-1 mr-3 list-empty-button" data-list-name="doneList">❌ vider </div>
+    </div>
+    <div id="doneListContent" class="listContent">
+      <div class="d-none flex-column" id="empty-done-list">
+        <div class="mt-4 pt-4 pb-2 font-weight-bold h5 text-center">-- Liste vide --</div>
+        <div class="mt-4 font-weight-bold h5 text-center">Les articles republiés<br>s'afficheront ici</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- item list template -->
+  <div style="display: none;">
+    <div id="itemTemplate" class="list-item align-middle bg-white">
+      <input type="number" class="d-none item-order text-sm" style="width: 27px">
+      <input type="checkbox" for="" class="d-none item-checkbox ">
+      <div class="image">
+        <img src="">
+      </div>
+      <a href="#" target="_blank" class="title"></a>
+    </div>
+  </div>
+</div>

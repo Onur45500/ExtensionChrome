@@ -1,0 +1,695 @@
+<div id="currentInterface" data-interface-name="action">  
+  <div class="upperButtons" id="upperButtons">
+    <div class="tabBox" id="tabBox">
+      <div id="homeTabLink" data-open-tab="homeTabLink" data-open-tab-container="currentInterface" class="tabLinks max-w-50px">
+        <img class="font-icon text-white align-middle pb-1 vinz-image" src="" data-image-name="house-user-solid.svg">
+      </div>
+      <div id="listsTabLink" data-open-tab="listsTabLink" data-open-tab-container="currentInterface" class="tabLinks max-w-50px d-none">
+        <img class="font-icon text-white align-middle pb-1 vinz-image" data-image-name="list-solid.svg" src="">
+      </div>
+      <div id="repostTabLink" data-open-tab="repostTabLink" data-open-tab-container="currentInterface" class="tabLinks max-w-50px d-none">
+        <img class="font-icon text-white align-middle pb-1 vinz-image" data-image-name="sync-alt-solid.svg" src="">
+      </div>
+      <div id="smartDressingTabLink" data-open-tab="smartDressingTabLink" data-open-tab-container="currentInterface" class="tabLinks max-w-50px d-none">
+        <img class="font-icon text-white align-middle pb-1 vinz-image" data-image-name="tshirt-solid.svg" src="">
+      </div>
+      <div id="autoMessageTabLink" data-open-tab="autoMessageTabLink" data-open-tab-container="currentInterface" class="tabLinks max-w-50px d-none">
+        <img class="font-icon text-white align-middle pb-1 vinz-image" data-image-name="comment-dollar-solid.svg" src="">
+      </div>
+      <div id="clipboardTabLink" data-open-tab="clipboardTabLink" data-open-tab-container="currentInterface" class="tabLinks max-w-50px d-none">
+        <img class="font-icon text-white align-middle pb-1 vinz-image" data-image-name="clipboard-solid.svg" src="">
+      </div>
+      <div id="sendFavouritesTabLink" data-open-tab="sendFavouritesTabLink" data-open-tab-container="currentInterface" class="tabLinks max-w-50px d-none">
+        <img class="font-icon text-white align-middle pb-1 vinz-image" data-image-name="hand-holding-heart-solid.svg" src="">
+      </div>
+      <div id="explainTabsTabLink" data-open-tab="explainTabsTabLink" data-open-tab-container="currentInterface" class="tabLinks max-w-20px" style="border:none;">
+        <img class="font-icon text-warning align-middle pb-1 vinz-image" data-image-name="ellipsis-h-solid.svg" src="">
+      </div>
+
+    </div>
+    <div class="upperRightButtons">
+      <div id="minimizeButton" class="minimizeButton"></div>
+    </div>
+  </div>
+
+  <div aria-labelledby="homeTabLink" class="tabContent" style="display: none;">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex cursor-pointer dropdown-main flex-column">
+        <div class="d-flex align-items-center">
+          <img class="mx-1 vinz-image" data-image-name="bot_smiling.png" style="max-height: 20px;" src="">
+
+          <div class="d-flex font-weight-bolder align-items-center">
+            <span>Menu</span>
+            <div class="chevron-down"></div>
+          </div>
+        </div>
+        <div class="dropdown-content" style="width: 130px;">
+          <a class="pl-2" href="https://www.clemz.app/user" target="_blank">Mon dashboard</a>
+          <div id="tutorialButtonMenu" class="pl-2 my-1">Voir le tuto</div>
+          <div id="helpTabLink" class="pl-2 my-1" data-open-tab="helpTabLink" data-open-tab-container="currentInterface" >Besoin d'aide ?</div>
+          <hr class="my-1">
+          <div id="logoutButton" class="text-danger pl-2">Déconnexion</div>
+        </div>
+      </div>
+      
+      <div id="versionNumber" class="font-weight-bolder">version : ???</div>
+    </div>
+
+    <div class="text-center my-3" id="subscribeCTA" style="display:none;">
+      <a href="https://www.clemz.app/user/pricing" class="btn btn-danger" target="_blank" ><b class="text-lg" style="color: white;"> 🚀 M'abonner à Clemz</b></a>
+    </div>
+
+    <div id="userInformations" class="mt-2 text-left">
+      <div class="d-flex align-items-center">
+        <div class="d-flex flex-column">
+          <p class="font-weight-bold mr-1" style="width: 110px;">Compte</p>
+          <div>
+            
+          </div>
+        </div>
+        <div class="d-flex flex-column text-md border-left border-grey pl-2">
+          <span id="userInfoEmail" class="font-weight-normal"></span>        
+          <a id="userInfoUsername" class="profileLink font-weight-normal"></a>
+          <div id="no-activity-for-6-months" class="text-danger lh-90 font-weight-bolder mt-1" style="display:none;">
+            6 mois sans utilisez Clemz ?<br>
+            => Nouvel essai possible !
+          </div>
+        </div>
+      </div>
+
+      <div id="userSubscriptionInfos">
+        <div class="d-flex align-items-center mt-2">
+          <p class="font-weight-bold mr-1" style="width: 110px;">Abonnement</p>
+          <div class="d-flex text-md border-left border-grey pl-2">
+              <span id="userSubscriptionName" class="text-danger font-weight-bolder">Aucun</span>
+            <span id="" class="refreshButton cursor-pointer text-sm badge badge-info ml-3">
+              <img class="font-icon vinz-image text-white" data-image-name="sync-solid.svg" style="max-height: 10px;" src=""> rafraîchir
+            </span>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center mt-2">
+          <p class="font-weight-bold mr-1 text-md-lg" style="width: 110px;">Republications</p>
+          <div class="d-flex flex-column text-md border-left border-grey pl-2">
+            <p class="font-weight-bold mt-1 mb-0" style="display: block;">
+              Restantes : <span class="text-primary" id="userInfoRepostLeft">---</span><span class="font-weight-bold text-dark" id="userInfoMaxRepostLeft"></span>
+            </p>
+            <p class="font-weight-bold mt-0" style="display: block;">
+              Validité : <span class="text-primary" id="userInfoNextTopUp">---</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center mt-2">
+          <p class="font-weight-bold mr-1 text-md-lg" style="width: 110px;">Messages favs </p>
+          <div class="d-flex flex-column text-md border-left border-grey pl-2">
+            <div>
+              <span id="userInfoAutoMessageNotAllowed" class="badge badge-danger">Non inclus</span>
+            </div>
+            <div id="userInfoAutoMessageAllowed" class="d-none">
+              <p class="font-weight-bold mt-1 mb-0" style="display: block;">
+                Restants ce jour : <span class="text-primary" id="userInfoAutoMessageLeft">---</span><span class="font-weight-bold text-dark" id="userInfoAutoMessageIncluded"></span>
+              </p>
+              <p class="font-weight-bold mt-0" style="display: block;">
+                Surveillance max : <span class="text-primary" id="userInfoAutoMessageMaxDuration">???</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tutorial step 1 -->
+    <div id="askingToLoginVintedProfile" class="tutorial-divs" style="display:none;">
+      <div class="mt-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="text-dark text-center my-4">⚠️Pour utiliser Clemz⚠️<br>⬇️<br><b>Connectez-vous à votre compte Vinted</b></div>
+        <a href="/member/general/login" class="btn btn-primary">👉 Cliquez ici</a>
+      </div>
+    </div>
+
+    <!-- tutorial step 2 -->
+    <div id="askingToGoToProfile" class="tutorial-divs" style="display:none;">
+      <div class="mt-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="text-dark text-center my-4">🖐️Pour lancer l'essai gratuit🖐️<br><b>Mettez vous sur votre page dressing</b></div>
+        <div class="text-center mt-2">
+          <a id="go-to-profile-button" href="/member/general/login" class="btn btn-primary profileLink">👉 Cliquez ici</a>
+          <div id="no-profile-instructions">(Cliquez, dans le menu Vinted ↗️,<br> sur "<b>Mon profil</b>")</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tutorial step 3 -->
+    <div id="askingToAddItemsToList" class="tutorial-divs" style="display:none;">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="text-dark text-center my-4">👍 Vous avez presque lancé l'essai 👍<br>⬇️<br><b>Rajoutez des articles dans votre liste pour les republier</b></div>
+        <div class="btn btn-primary d-flex align-items-center" data-open-tab="listsTabLink" data-open-tab-container="currentInterface" role="button">
+          <img class="font-icon text-white align-middle pb-1 vinz-image mr-2" data-image-name="list-solid.svg" src="">
+          Allez vers "Remplir mes listes"
+        </div>
+      </div>
+    </div>
+
+    <!-- tutorial step 4 -->
+    <div id="askingToStartRepost" class="tutorial-divs" style="display:none;">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="text-dark text-center my-4">🤩 Dernière étape avant l'essai !🤩<br>⬇️<br><b>Lancez la republication de votre liste</b></div>
+        <div class="btn btn-primary d-flex align-items-center" data-open-tab="repostTabLink" data-open-tab-container="currentInterface" role="button">
+          <img class="font-icon text-white align-middle pb-1 vinz-image mr-2" data-image-name="sync-alt-solid.svg" src="">
+          Allez vers "Republier des articles"
+        </div>
+      </div>
+    </div>
+
+    <div id="handlePastDue" style="display:none;">
+      <div class="mt-2 text-center">
+        <p class="badge badge-danger text-sm-md">Echec de paiement</p>
+        <div class="border border-danger border-radius text-sm-md py-2 text-center" style="border-width: 3px;">
+          <p>
+            Le paiement de ton abonnement a échoué. <br><br>
+            <b>Régularise ta situation via ton Dashboard</b><br> pour continuer à profiter de Clemz.
+          </p>
+          <a href="https://www.clemz.app/user?show=subscription" class="btn btn-danger mt-2" target="_blank"><b class="text-lg">Régulariser 💳</b> </a>
+        </div>
+        <div class="text-right">
+          <span id="" class="refreshButton cursor-pointer text-sm badge badge-info">
+            <img class="mr-1 font-icon vinz-image text-white" data-image-name="sync-solid.svg" style="max-height: 10px;" src=""> Rafraîchir infos
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column align-items-center justify-content-center" style="position: absolute; bottom: 1px; width: 300px;">
+      <p class="text-sm-md">Un problème ? Une question ?</p>
+      <p class="text-sm-md mt-0">Ecris-moi à <span class="text-danger font-weight-bold text-lg cursor-pointer click-to-copy"><u>clement@clemz.app</u></span></p>
+    </div>
+  </div>
+
+  <div aria-labelledby="repostTabLink" class="tabContent" style="display: none;">
+    <p class="h4 text-center font-weight-bolder text-primary mt-0">Republier des articles
+      <a class="text-sm ml-2 tooltip tooltip-left" href="https://www.clemz.app/documentation/republier-des-articles" target="_blank" data-tooltip="Clic pour apprendre à bien republier tes articles">
+        <img class="font-icon align-middle pb-1 vinz-image" data-image-name="question-circle-solid.svg" src="">
+      </a>
+    </p>
+    <div class="d-flex flex-column">
+      <div class="font-weight-bolder mt-0">1. Vérifier la <a class="" id="showListsButton2"><u>liste "à traiter"</u></a></div>
+      <div class="text-sm font-weight-normal text-center mb-1 lh-110">La republication aura lieu sur la liste "📥 à traiter" </div>
+
+      <div class="font-weight-bolder">2. Choisir tes options</div>
+      <div class="d-flex align-items-center mt-0">
+        <div id="repostOnebyOneControl" class="custom-control custom-switch ml-n4">
+          <input type="checkbox" class="custom-control-input" id="repostOnebyOne">
+          <label class="custom-control-label align-middle text-sm" for="repostOnebyOne"><b class=""><span class="text-sm-md text-dark">1</span> par 1 :</b> Traiter le 1er article puis stop</label>
+        </div>
+        <div class="tooltip tooltip-left mb-1 text-sm ml-2" data-tooltip="Ne faire que le 1er article de la liste puis stopper. Cela vous permet de vérifier chaque article.">
+          <img data-image-name="question-circle-solid.svg" class="vinz-image font-icon align-middle pb-1 " src="">
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <div id="addViewsRepostingControl" class="custom-control custom-switch ml-n4">
+          <input type="checkbox" class="custom-control-input" id="addViewsReposting">
+          <label class="custom-control-label align-middle text-sm" for="addViewsReposting">
+            <img class="font-icon align-middle pb-1 vinz-image" data-image-name="eye-regular.svg" src="">
+            <b class="">Vues :</b> Ajouter environ <select id="maxViewsRepostingSelect" class="fake-disabled">
+              <option value="10">10</option>
+              <option value="20" selected>20</option>
+            </select> vues
+          </label>
+        </div>
+        <div class="tooltip tooltip-left mb-1 text-sm ml-2" data-tooltip="Après republication, l'annonce obtient des vues pour inciter l'algo Vinted à la mettre en avant">
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <div id="quickRepostControl" class="custom-control custom-switch ml-n4">
+          <input type="checkbox" class="custom-control-input" id="quickRepostMode">
+          <label class="custom-control-label align-middle text-sm" for="quickRepostMode">
+            <img class="font-icon align-middle pb-1 vinz-image" data-image-name="bolt-solid.svg" src="">
+            <b class="">Mode : </b> Republication rapide</label>
+        </div>
+        <div class="tooltip tooltip-left mb-1 text-sm ml-2" data-tooltip="Mode où la republication des photos est + rapide mais avec un léger risque que les photos soient perdues">
+          ⚠️
+        </div>
+      </div>
+
+      <div class="font-weight-bolder mt-2">3. Choisir une action</div>
+      <div class="input-group">
+        <select id="repostSelectAction" class="custom-select">
+          <option value="1">♻️ Republier annonce(s)</option>
+          <option value="2">💾 Annonce =&gt; Brouillon</option>
+          <option value="3">🚀 Brouillon =&gt; Annonce</option>
+        </select>
+        <div class="input-group-append">
+          <button type="button" id="repostButton" class="btn btn-primary btn-sm can-be-disabled" style="position: relative;">
+            Go Clemz ! 
+            <div class="spinner-border text-white" role="status" style="position: absolute; right: 10%; display:none;">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="font-weight-bolder mt-3">
+        4. Échanger des favoris 
+        <a class="text-sm ml-2 tooltip tooltip-left" href="https://www.clemz.app/documentation/echanger-des-favoris" target="_blank" data-tooltip="Clic pour apprendre comment fonctionne l'échange de favoris">
+          <img class="font-icon align-middle pb-1 vinz-image" data-image-name="question-circle-solid.svg" src="">
+        </a>
+      </div>
+      <div class="vinzRow mt-1">
+        <div class="col-6 d-flex flex-column align-items-center">
+           <div class="text-sm-md">Demande récente :</div>
+           <div  id="lastRequestFavDate">???</div>
+        </div>
+        <div class="col-6 d-flex justify-content-center align-items-center" style="position: relative;">
+          <button id="requestFavsButton" class="btn btn-outline-primary btn-xs can-be-disabled" style="position: relative;">
+            💞 Faire une
+            <div class="spinner-border text-dark" role="status" style="position: absolute; left: 28px; display:none;">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <br>demande de favoris
+          </button>
+          <span class="btn-xs btn-warning text-dark py-1 px-2" style="position: absolute; top: -15px; right: -4px;">bêta</span>
+        </div>
+        
+      </div>
+     
+    </div>
+  </div>
+
+  <div aria-labelledby="listsTabLink" class="tabContent" style="display: none;">
+    <p class="h4 text-center font-weight-bolder mt-0 text-primary">Remplir mes listes</p>
+    <div class="d-flex flex-column">
+      
+      <span class="font-weight-bolder mt-2">1. Sélectionner des articles affichés</span>
+      <div class="d-flex justify-content-center align-items-center my-1">
+        <button id="selectItemsButton" class="btn btn-primary btn-sm">Lancer la sélection</button>
+        <span class="ml-2 text-bold" id="selectedCount" style="display: none;">(0 ✅)</span>
+      </div>
+      <div id="selectOptions" class="d-none">
+        <div class="d-flex align-items-center mt-1">
+          <span class="text-sm-md">=> Tout déselectionner</span>
+          <button class="badge btn-outline-primary cursor-pointer border ml-2" id="unselectAllButton">ok</button>
+        </div>
+        <div class="d-flex align-items-center">
+          <form id="selectTopArticlesForm">
+            <span class="text-sm-md">=> Sélectionner les</span>
+            <input type="number" min="0" name="" style="width: 30px" class="mx-1 text-center" placeholder="0" id="selectTopArticlesValue">
+            <span class="text-sm-md">articles du haut</span>
+            <button class="badge btn-outline-primary cursor-pointer border ml-2" id="">ok</button>
+          </form>
+        </div>
+      </div>
+      <span class="font-weight-bolder mt-4">2. Ajouter la sélection à une liste</span>
+      <div class="input-group mt-1">
+        <select class="custom-select text-center" id="listSelect">
+          <option value="1">📥 Liste "à traiter"</option>
+          <option value="2">📦 Liste "en stock"</option>
+        </select>
+        <div class="input-group-append">
+          <button type="button" id="addToListButton" class="btn btn-primary btn-sm">+ ajouter !</button>
+        </div>
+      </div>
+      <span class="font-weight-bolder mt-4">3. Vérifier mes listes</span>
+      <div class="mt-1 font-weight-bold text-center"><span role="button" class="btn btn-outline-primary" id="showListsButton1">📋 Voir mes listes</span></div>
+    </div>
+  </div>
+
+  <div aria-labelledby="smartDressingTabLink" class="tabContent" style="display: none;">
+    <p class="h4 text-center font-weight-bolder mt-0 text-primary">Smart dressing</p>
+    <div class="d-flex justify-content-end mt-n5" style="height: 28px;">
+      <a class="profileLink text-sm-md badge badge-info" href="#">
+        <img class="font-icon text-white vinz-image" data-image-name="up-right-from-square-solid.svg" src="">
+      </a>
+    </div>
+
+    <div class="text-sm-md font-weight-normal text-center text-dark mt-2">Fouille ton dressing en l'affichant<br>trié ou filtré à volonté <br>(vue invisible des clients)</div>
+
+    <div class="d-flex justify-content-center align-items-center">
+      <button id="smartDressingButton" class="btn btn-primary btn-sm d-flex justify-content-center align-items-center text-lg can-be-disabled" style="position: relative;">
+        <div class="h2 mr-4">🪄</div>
+        <div>Lancer le <br>Smart Dressing</div>
+        <div class="spinner-border text-white" role="status" style="position: absolute; right: 35%; display:none;">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </button>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center my-2">
+      <div class="h-line" style="width: 100px;"></div>
+      <div style="display:inline-block;" class="mx-3">OU</div>
+      <div class="h-line" style="width: 100px;"></div>
+    </div>
+
+    <div class="text-center font-weight-bolder mt-2 text-primary">Smart dressing partiel</div>
+    <div class="text-sm font-weight-normal text-center text-dark mb-3 mt-n2">(Si ton dressing a plus de 2000 annonces)</div>
+
+    <form id="showItemsForm" class="text-center">
+      <div class="d-flex mt-1 align-items-center justify-content-center text-sm-md text-dark">
+        <span class="pr-1">Articles du n°</span>
+        <input type="number" min="0" id="itemsBegin" class="text-center" style="width: 40px; height: 20px;">
+        <span class="px-1">au n°</span>
+        <input type="number" min="0" id="itemsEnd" class="text-center" style="width: 40px; height: 20px;">
+        <div class="tooltip tooltip-left mb-1 text-sm ml-2" data-tooltip="Laisse le dernier champ vide pour viser le dernier article de ton dressing">
+          <img data-image-name="question-circle-solid.svg" class="vinz-image font-icon align-middle pb-1 " src="">
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center mt-3">
+        <button type="submit" id="showItemsButton" class="btn btn-primary btn-sm">Afficher ces articles</button>
+      </div>
+    </form>
+  </div>
+
+  <div aria-labelledby="autoMessageTabLink" class="tabContent" style="display: none;">
+    <p class="h4 text-center font-weight-bolder my-0 text-primary">Messages aux favoris</p>
+
+    <div class="d-flex align-items-center mt-1">
+      <div class="font-weight-bolder mr-2">1. Éditer les</div>
+      <div role="button" class="btn btn-xs btn-outline-primary px-1" id="autoMessageTextsButton">Textes des messages envoyés</div>
+    </div>
+
+    <div class="font-weight-bolder mt-2">2.a) Options - Favoris <u>déjà</u> reçus</div>
+    <div class="d-flex align-items-center mt-0">
+      <div id="ignorePastNotificationsControl" class="custom-control custom-switch ml-n4">
+        <input type="checkbox" class="custom-control-input" id="ignorePastNotifications">
+        <label class="custom-control-label align-middle text-sm" for="ignorePastNotifications">Ne réagir qu'aux favoris reçus <u>en live</u></label>
+      </div>
+      <div class="tooltip tooltip-left text-sm ml-3" data-tooltip="Pendant la phase initiale de lecture des favs déjà reçus, ne pas leur envoyer de message.">
+        <img data-image-name="question-circle-solid.svg" class="vinz-image font-icon align-middle " src="">
+      </div>
+    </div>
+    <div class="d-flex align-items-center mt-2">
+      <div id="maxDaysInPastControl" class="custom-control custom-switch ml-n4">
+        <input type="checkbox" class="custom-control-input" id="maxDaysInPastSwitch">
+        <label class="custom-control-label align-middle text-sm" for="maxDaysInPastSwitch">Se limiter aux 
+          <select type="number" id="maxDaysInPastValue" class="text-center fake-disabled" >
+            <option value="1"selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+         derniers jours
+        </label>
+      </div>
+      <div class="tooltip tooltip-left text-sm ml-3" data-tooltip="Pendant la phase initiale, ne lire que les favs des X derniers jours (pour gagner du temps).">
+        <img data-image-name="question-circle-solid.svg" class="vinz-image font-icon align-middle " src="">
+      </div>
+    </div>
+
+    <div class="font-weight-bolder mt-2">2.b) Options - Contact des Vinties</div>
+    <div class="d-flex justify-content-start align-items-center">
+      <div id="autoMessageExcludedVintiesButton" class="badge btn-outline-primary cursor-pointer border">Voir</div>
+      <div class="ml-2 text-sm text-dark">Liste des Vinties à exclure </div>
+      <div class="tooltip tooltip-left text-sm ml-3" data-tooltip="Les comptes saisis dans cette liste ne recevront pas de message automatique.">
+        <img data-image-name="question-circle-solid.svg" class="vinz-image font-icon align-middle" src="">
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center mt-2">
+      <div id="makeOfferControl" class="custom-control custom-switch ml-n4">
+        <input type="checkbox" class="custom-control-input" id="makeOffer">
+        <label class="custom-control-label align-middle text-sm" for="makeOffer">Faire une remise de
+          <input type="number" id="makeOfferValue" class="text-center fake-disabled" style="width: 30px; height: 20px;" value="0">
+          <select id="makeOfferType" class="fake-disabled">
+            <option value="%" selected>%</option>
+            <option value="€">€</option>
+          </select>
+        </label>
+      </div>
+      <div class="tooltip tooltip-left text-sm ml-3 align-middle" data-tooltip="En même temps que le message, inciter à l'achat en proposant une réduction sur l'article">
+        <img data-image-name="question-circle-solid.svg" class="vinz-image font-icon align-middle " src="">
+      </div>
+    </div>
+    <div class="d-flex align-items-center mt-2">
+      <div id="checkUserFeedbackControl" class="custom-control custom-switch ml-n4">
+        <input type="checkbox" class="custom-control-input" id="checkUserFeedback">
+        <label class="custom-control-label align-middle text-sm" for="checkUserFeedback">Ignorer si note inférieure à 
+          <select type="number" id="checkUserFeedbackValue" class="text-center fake-disabled" style="width: 50px; height: 20px;">
+            <option value="1"selected>⭐</option>
+            <option value="2">2x⭐</option>
+            <option value="3">3x⭐</option>
+            <option value="4">4x⭐</option>
+            <option value="5">5x⭐</option>
+          </select>
+        </label>
+      </div>
+      <div class="tooltip tooltip-left text-sm ml-3" data-tooltip="Ne pas contacter la Vintie si sa note d'évaluation est inférieure à un certain nombre d'étoiles">
+        <img data-image-name="question-circle-solid.svg" class="vinz-image font-icon align-middle " src="">
+      </div>
+    </div>
+
+    <div class="d-flex mt-2 align-items-center">
+      <span class="font-weight-bolder mr-2">3.</span>
+      <div class="d-flex justify-content-center align-items-center">
+        <button id="autoMessageStartButton" class="btn btn-primary btn-sm d-flex justify-content-center align-items-center py-2 can-be-disabled">
+          <div class="h4 mr-2">📨</div>
+          <div>Lancer messages aux favs</div>
+          <div class="spinner-border text-white" role="status" style="position: absolute; left: 15%; display:none;">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center">
+      <a href="https://www.clemz.app/documentation/messages-aux-favs" target="_blank">📖 <u>Comment ça fonctionne ??</u></a>
+    </div>
+  </div>
+
+  <div aria-labelledby="clipboardTabLink" class="tabContent" style="display: none;">
+    <p class="h4 d-flex justify-content-center align-items-center font-weight-bolder mt-0 text-primary">Copier / Coller
+      <a class="text-sm ml-1 tooltip tooltip-left d-flex align-items-center" data-tooltip="Enregistre ici les textes que tu dois souvent copier-coller dans Vinted">
+        <img data-image-name="question-circle-solid.svg" class="vinz-image font-icon align-middle" src="">
+      </a>
+    </p>
+    <div class="d-flex justify-content-around text-sm text-dark">
+      <div id="modifyClipboardButton" class="cursor-pointer border-radius bg-light-grey p-1">⚙️ modif/suppr</div>
+      <div id="moveClipboardButton" class="cursor-pointer border-radius bg-light-grey p-1">⬆️⬇️ déplacer</div>
+      <div id="createClipboardButton" class="cursor-pointer border-radius bg-light-grey p-1">➕ nouveau </div>
+    </div>
+    <div id="clipboardIndex" class="">
+    </div>
+
+    <!-- clipboard element template -->
+    <div style="display: none;">
+      <div id="clipboardTemplate" class="clipboard-element d-flex align-items-center pb-1">
+        <button class="updateClipboardButton clipboard-element-hidden d-none">📝</button>
+        <button class="deleteClipboardButton clipboard-element-hidden mx-1 d-none">❌</button>
+        <input type="number" name="" class="clipboard-element-hidden d-none">
+        <div class="copyClipboardButton cursor-pointer d-flex align-items-center justify-content-between flex-grow-1">
+          <div class=""> 
+            <p class="clipboardTitle text-dark text-sm-md font-weight-bolder"></p>
+            <p class="clipboardContent mt-0 text-sm lh-90"></p>
+          </div>
+          <div class="cursor-pointer badge badge-info p-1">copier</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div aria-labelledby="sendFavouritesTabLink" class="tabContent" style="display: none;">
+    <p class="h4 d-flex justify-content-center align-items-center font-weight-bolder mt-0 text-primary">Donner des favoris</p>
+
+    <div class="font-weight-bolder mt-4">Vérifier l'activation des notifications</div>
+    <div class="d-flex justify-content-around align-items-center">
+      <div class="text-sm text-center text-dark">Envoi de notifications quand<br>je donne un favori</div>
+      <div role="button" class="btn btn-dark btn-xs" id="checkSendNotifToFavourites">Vérifier bouton</div>
+      <div id="sendNotifToFavouritesControl" class="custom-control custom-switch ml-n4 pt-2 d-none">
+        <input type="checkbox" class="custom-control-input" id="sendNotifToFavouritesCheckbox">
+        <label class="custom-control-label align-middle text-sm" id="sendNotifToFavouritesLabel" for="sendNotifToFavouritesCheckbox">
+        </label>
+      </div>
+    </div>
+
+
+
+    <form id="sendFavouriteForm" class="">
+      <div class="font-weight-bolder mt-2">1. Choisir les options</div>
+
+      <div class="text-sm mt-2 mb-1 text-dark">
+        Mettre un favori aux
+        <input type="number" min="0" id="sendFavouritesCount" class="text-center text-dark" style="width: 30px; height: 20px;" placeholder="X">
+        premiers articles
+      </div>
+
+      <div class="d-flex align-items-center">
+        <div id="addViewsSendFavsControl" class="custom-control custom-switch ml-n4">
+          <input type="checkbox" class="custom-control-input" id="addViewsSendFavs">
+          <label class="custom-control-label align-middle text-sm" for="addViewsSendFavs">
+            <img class="font-icon align-middle pb-1 vinz-image" data-image-name="eye-regular.svg" src="">
+            Ajouter 1 vue avec chaque favori
+          </label>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <div id="turnOffNotifsFavsControl" class="custom-control custom-switch ml-n4">
+          <input type="checkbox" class="custom-control-input" id="turnOffNotifsFavs">
+          <label class="custom-control-label align-middle text-sm" for="turnOffNotifsFavs">
+            <img class="font-icon align-middle pb-1 vinz-image" data-image-name="bell-slash-solid.svg" src="">
+            Désactiver notifications sur cet envoi
+            <div class="tooltip tooltip-left mb-1 text-sm ml-1" data-tooltip="Désactiver temporairement l'envoi de notifications sur cet envoi. Réactiver ensuite.">
+              <img data-image-name="question-circle-solid.svg" class="vinz-image font-icon align-middle pb-1 " src="">
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="font-weight-bolder mt-4">2. Lancer l'action</div>
+      <div class="d-flex justify-content-center align-items-center mt-2">
+        <button id="sendFavouriteButton" type="submit" class="btn btn-primary btn-sm d-flex justify-content-center align-items-center py-2 can-be-disabled">
+          <div class="h4 mr-2">💘</div>
+          <div>Donner des favoris à ce dressing</div>
+          <div class="spinner-border text-white" role="status" style="position: absolute; left: 35px; display:none;">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div aria-labelledby="explainTabsTabLink" class="tabContent" style="display: none;">
+    <p class="h4 d-flex justify-content-center align-items-center font-weight-bolder mt-0 text-primary">Afficher le bon onglet ?</p>
+    <div class="text-sm font-weight-normal text-center mt-n2 lh-110">Les onglets s'affichent selon la page Vinted visitée.</div>
+    <div class="text-sm font-weight-normal text-center mb-1 lh-110">Sinon, <b>cliquez sur le nom de l'onglet ci-dessous 👇</b></div>
+
+
+    <table>
+      
+      <thead>
+        <tr class="border border-bottom text-md">
+          <th class="border-sm border-right border-bottom border-black">Onglet Clemz</th>
+          <th class="border-sm border-bottom border-black" >Page Vinted visitée</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr >
+          <td class="border-bottom border-black">
+            <div class="text-primary text-sm my-1" data-open-tab="listsTabLink" data-open-tab-container="currentInterface" role="button">
+              <img class="font-icon text-primary align-middle pb-1 vinz-image" data-image-name="list-solid.svg" src="">
+              Remplir mes listes
+            </div>
+            <div class="text-primary text-sm my-1" data-open-tab="repostTabLink" data-open-tab-container="currentInterface" role="button">
+              <img class="font-icon text-primary align-middle pb-1 vinz-image" data-image-name="sync-alt-solid.svg" src="">
+              Republier des articles
+            </div>
+            <div class="text-primary text-sm my-1" data-open-tab="smartDressingTabLink" data-open-tab-container="currentInterface" role="button">
+              <img class="font-icon text-primary align-middle pb-1 vinz-image" data-image-name="tshirt-solid.svg" src="">
+              Smart dressing
+            </div>
+          </td>
+          <td class="border-bottom border-black" >
+            <div class="d-flex align-items-center">
+              <img class="font-icon vinz-image mr-2" data-image-name="long-arrow-alt-right-solid.svg" src="">
+              <a class="profileLink d-flex align-items-center text-md" href="">
+                Mon dressing<img class="font-icon text-primary vinz-image ml-2" data-image-name="up-right-from-square-solid.svg" src="">
+              </a>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="border-bottom border-black">
+            <div class="text-primary text-sm my-1" data-open-tab="autoMessageTabLink" data-open-tab-container="currentInterface" role="button">
+              <img class="font-icon text-primary align-middle pb-1 vinz-image" data-image-name="comment-dollar-solid.svg" src="">
+              Messages aux favoris
+            </div>
+          </td>
+          <td class="border-bottom border-black">
+            <div class="d-flex align-items-center">
+              <img class="font-icon vinz-image mr-2" data-image-name="long-arrow-alt-right-solid.svg" src="">
+              <a class="d-flex align-items-center text-md" href="/inbox/">
+                Messagerie<img class="font-icon text-primary vinz-image ml-2" data-image-name="up-right-from-square-solid.svg" src="">
+              </a>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="border-bottom border-black" data-open-tab="sendFavouritesTabLink" data-open-tab-container="currentInterface" role="button">
+            <div class="text-primary text-sm my-1">
+              <img class="font-icon text-primary align-middle pb-1 vinz-image" data-image-name="hand-holding-heart-solid.svg" src="">
+              Donner des favoris
+            </div>
+          </td>
+          <td class="border-bottom border-black">
+            <div class="d-flex align-items-center">
+              <img class="font-icon vinz-image mr-2" data-image-name="long-arrow-alt-right-solid.svg" src="">
+              <span class="text-md text-dark">Dressing ami(e)</span>
+              
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="border-bottom border-black">
+            <div class="text-primary text-sm my-1" data-open-tab="clipboardTabLink" data-open-tab-container="currentInterface" role="button">
+              <img class="font-icon text-primary align-middle pb-1 vinz-image" data-image-name="clipboard-solid.svg" src="">
+              Copier / Coller
+            </div>
+          </td>
+          <td class="border-bottom border-black">
+            <div class="d-flex align-items-center">
+              <img class="font-icon vinz-image mr-2" data-image-name="long-arrow-alt-right-solid.svg" src="">
+              <a class="d-flex align-items-center text-md" href="/inbox/">
+                Messagerie<img class="font-icon text-primary vinz-image ml-2" data-image-name="up-right-from-square-solid.svg" src="">
+              </a>
+            </div>
+            <div class="d-flex align-items-center">
+              <img class="font-icon vinz-image mr-2" data-image-name="long-arrow-alt-right-solid.svg" src="">
+              <span class="text-md text-dark">Modifier article</span>
+
+            </div>
+          </td>
+        </tr>
+
+
+      </tbody>
+    </table>
+
+    <div class="d-flex flex-column">
+
+      <div class="text-primary text-sm">
+
+      </div>
+      <div class="text-primary text-sm">
+
+      </div>
+
+
+
+
+      
+    </div>
+
+
+
+  </div>
+
+
+  <div aria-labelledby="helpTabLink" class="tabContent" style="display: none;">
+    <p class="h4 text-center font-weight-bolder text-info">Aide</p>
+    <div class="d-flex flex-column">
+      <p class="font-weight-bold text-center">Un problème ? Un bug ?</p>
+      <p class="font-weight-bold text-center mt-0">Envoyez-moi un email à :</p>
+      <div class="text-center">
+        <a class="h3 font-weight-bold text-info click-to-copy" id="">clement@clemz.app</a>
+      </div>
+      <a class="d-flex align-items-center justify-content-center text-sm text-info" href="https://www.clemz.app/about" target="_blank">
+        (<span class="">Qui est Clément ? 👋</span>)
+      </a>
+    </div>
+
+    <p class="text-center mt-4 text-sm text-dark">Sinon, parcourez rapidement ces 2 pages. <br> Elles répondent à 90% des problèmes.</p>
+    <div class="d-flex justify-content-around mt-2">
+      <a class="btn btn-info d-flex flex-column align-items-center" href="https://www.clemz.app/documentation/resoudre-un-bug" target="_blank">
+        <img class="font-icon text-white vinz-image" data-image-name="readme.svg" src="">
+        <span class="mt-1 text-white">Lire la doc</span>
+      </a>
+      <a class="btn btn-info d-flex flex-column align-items-center" href="https://www.clemz.app/documentation/faq" target="_blank">
+        <img class="font-icon text-white vinz-image" data-image-name="question-solid.svg" src="">
+        <span class="mt-1 text-white">Voir la FAQ</span>
+      </a>
+    </div>
+  </div>
+
+</div>  

@@ -1,0 +1,23 @@
+<p class="text-center mb-5 h4">🛑 La liste contient une erreur 🛑</p>
+<p class="mt-2">L'annonce suivante :</p>
+<div class="d-flex justify-content-center align-items-center mx-3">
+  <img id="itemThumbnail" class="progressImage rounded-img vinz-image" src="">
+  <span class="h5 font-weight-bold" id="itemTitle"></span>
+</div>
+<p>n'a pas été republiée correctement suite à une erreur. Pour remettre ton dressing en ordre, Clemz dit :</p>
+<div class="d-flex justify-content-center align-items-center m-3">
+  <span id="itemError" class="h5 font-weight-bold"></span>
+</div>
+
+<p class="mt-5"><b>➡️ As-tu effectué ces actions ?</b></p>
+<ul>
+  <li class="d-none mt-0" id="choiceForDelete">Si oui, l'article sera <b>supprimé ❌</b> de ta liste.</li>  
+  <li class="d-none mt-0" id="choiceForRepost">Si oui, <b>une nouvelle republication ♻️ sera tentée</b> sur l'article.</li>  
+  <li class="mt-0">Sinon, Clemz ne touchera pas à l'article pour que tu y penses.</li>
+</ul>
+
+<div class="d-flex justify-content-between mt-2">
+  <div class="btn btn-danger" id="cancelMajorErrorModification" role="button">Non</div>
+  <div class="btn btn-outline-success d-none" id="confirmMajorErrorRepost" role="button">oui, republier ♻️</div>
+  <div class="btn btn-outline-success d-none" id="confirmMajorErrorDelete" role="button">oui, supprimer ❌</div>
+</div>

@@ -1,0 +1,24 @@
+<div class="toolModal-content">
+  <div class="tabBox w-100">
+    <div class="frozenTabLinks flex-basis-auto text-lg font-weight-bolder">Textes des messages</div>
+    <span class="close-modal bg-primary-dark px-2" id="close-modal">&times;</span>
+  </div>
+  <div class="toolModal-tabContent px-0" style="display: block;">
+    <form class="p-1 mx-2" id="autoMessageTextsForm">
+      <label><span class="font-weight-bolder">1er message</span></label>
+      <textarea rows="6" name="firstMessage" id="firstMessage" placeholder="Merci pour ton favori 😊 &#10; &#10;N'hésite pas à me contacter si tu as une quelconque question." class="formControl-sm p-1 h-100 mb-3"></textarea>
+
+      <label >
+        <div class="lh-100">
+          <div class="font-weight-bolder">2nd message <span class="h6 font-weight-normal">(si Vintie met 2 favs en 24h)</span></div>
+          <div class="h6">Si vide => 1 message max envoyé par 24h</div>
+        </div>
+        
+      </label>
+      <textarea rows="6" name="secondMessage" id="secondMessage" placeholder="Et si tu apprécies plusieurs annonces, penses à faire un lot avec tous tes favoris pour faire des économies 🎉!&#10;&#10;Bonne journée" class="formControl-sm p-1 h-100"></textarea>
+      <div class="d-flex justify-content-end mt-2">
+        <button type="submit" class="btn btn-success btn-sm">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+</div>

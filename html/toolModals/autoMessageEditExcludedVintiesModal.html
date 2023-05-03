@@ -1,0 +1,24 @@
+<div class="toolModal-content">
+  <div class="tabBox w-100">
+    <div class="frozenTabLinks flex-basis-auto text-lg font-weight-bolder">Vinties à ne pas contacter</div>
+    <span class="close-modal bg-primary-dark px-2" id="close-modal">&times;</span>
+  </div>
+  <div class="toolModal-tabContent px-0" style="display: block;">
+    <div class="p-1 mx-2">
+      <label>
+        <div class="text-md lh-100 mb-2">
+          Les <span id="excludedVintiesCount" class="text-dark font-weight-bold"></span> Vinties ci-dessous ne seront pas contactées même si elles te mettent un fav.
+        </div>
+      </label>
+      <div id="excludedVintiesInterface" class="border border-grey border-radius mb-3">
+        <div id="excludedVintiesList" class="" style="max-height: 200px; overflow-y: auto;">
+        </div>
+        <input id="addExcludedVintie" placeholder="Rajouter une Vintie" class="formControl-sm border-none p-1 h-100">
+      </div>
+      <div class="d-flex justify-content-end">
+        <button id="submitExcludedVinties" type="submit" class="btn btn-success btn-sm">Enregistrer</button>
+      </div>
+    </div>
+  </div>
+</div>
+

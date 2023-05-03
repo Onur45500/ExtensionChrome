@@ -1,0 +1,80 @@
+<div id="currentInterface" data-interface-name="autoMessage">
+  <div class="upperButtons" id="upperButtons">
+    <div class="tabBox" id="tabBox">
+      <h6 class="progressTitle d-flex justify-content-center align-items-center">
+        <img class="vinz-image" data-image-name="bot_smiling.png" src=""><span class="ml-2 mr-3">Clemz bosse pour toi</span>
+
+      </h6>
+    </div>
+    <div id="minimizeButton" class="minimizeButton"></div>
+  </div>
+
+  <div class="d-flex flex-column justify-content-between tabContent">
+    <div class="d-flex flex-column lh-100">
+      <div class="d-flex align-items-center justify-content-center mb-1">
+        <p class="h6 text-center font-weight-bolder my-0 lh-100">Surveillance continue des favs :</p>
+        <span class="h5 font-weight-bolder text-success mx-2" id="autoMessageStatus">
+          Activée
+        </span>
+        <span class="spinner-border text-success mr-2" role="status" id="autoMessageSpinner"><span class="sr-only"></span></span>
+        <span role="button" class="btn btn-xs btn-dark ml-2" id="autoMessageStopButton">🛑 ARRÊT</span>
+      </div>
+
+      <div id="progressUiContainer" class="border-top border-md" style="min-height: 118px;" data-interface-name="countDown">
+        <div class="d-flex flex-column align-items-center mt-2">
+          <d class="d-flex justify-content-start">
+            <div class="font-weight-bolder text-left">Prochaine vérif des favs dans :</div>
+          </d>
+
+          <div class="d-flex justify-content-center align-items-center lh-100 mt-2">
+            <div class="h3 mr-3">⌚</div>
+            <div id="" class="h3 font-weight-bolder text-dark mr-2" style="display: flex;">
+              <div id="minutesValue" class="mr-1">--</div>
+              <div class="">min</div>
+            </div>
+            <div id="" class="h3 font-weight-bolder text-dark" style="display: flex;">
+              <div id="secondsValue" class="mr-1">--</div>
+            </div>
+            <!-- <div class="text-sm">(environ)</div> -->
+          </div>
+          <p class="text-sm-md mt-1 d-none" id="autoMessageMaxTimeContainer">
+            fin de la surveillance à :
+            <span class="h6 font-weight-bolder text-dark" id="autoMessageMaxTime"></span>
+            <span class="tooltip tooltip-left mb-1 text-sm ml-2" data-tooltip="Ton abonnement a une limite de durée sur la surveillance.">
+              <img data-image-name="question-circle-solid.svg" class="vinz-image font-icon align-middle pb-1 " src="">
+            </span>
+          </p>
+          <div class="mt-2 border border-warning rounded text-sm-md text-center d-none d-lg-flex flex-column align-items-center px-2 lh-130">
+            <b>⚠️Attention⚠️</b>
+            <span> Si ton ordi passe en veille, Clemz s'arrêtera !</span>
+          </div>
+          <div class="mt-2 border border-warning rounded text-sm-md text-center d-block d-lg-none flex-column align-items-center px-2 text-center lh-120">
+            <b>⚠️Attention⚠️</b> <br>
+            <span> Le navigateur doit rester actif à l'écran <br> + pas de veille sinon Clemz s'arrête !</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="font-weight-bolder text-left border-top border-md pt-2 ">Paramètres saisis:</div>
+      <div class="d-flex justify-content-between align-items-center mb-1">
+        <div class="font-weight-bold text-sm-md"><span id="makeOfferStatus">❌</span> Faire une remise <span id="makeOfferShowValue" class="font-weight-bolder"></span></div>
+        <div id="autoMessageTextsButton" class="badge btn-outline-primary cursor-pointer border text-sm-md">Voir textes</div>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="font-weight-bold text-sm-md mt-1"><span id="checkUserFeedbackStatus">❌</span> Ignorer mal notées <span id="checkUserFeedbackShowValue" class="font-weight-bolder"></span></div>
+        <div id="autoMessageExcludedVintiesButton" class="badge btn-outline-primary cursor-pointer border text-sm-md">Voir exclues</div>
+      </div>
+
+      <div class="d-flex flex-column lh-100 mt-3">
+        <div class="text-sm-md text-center my-1 text-decoration-on">Comment suivre les actions de Clemz ?</div>
+        <div class="text-sm mt-1">1) <a href="/inbox">Messagerie Vinted</a> : Liste des messages envoyés</div>
+        <div class="text-sm">2) depuis ton <a href="https://www.clemz.app/user" target="_blank" class="">dashboard Clemz</a></div>
+        <ul class="text-sm mt-0">
+          <li class="mt-0"> Checke à distance que la surveillance reste active</li>
+          <li class="mt-0"> Résumé des messages envoyés par Clemz</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>

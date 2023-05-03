@@ -1,0 +1,101 @@
+<div id="smartDressingSpacer"></div>
+<div id="smartDressingHeader" style="background-color: white; z-index: 200000; position: sticky; position: -webkit-sticky; top: 0px;" class="w-100 d-flex flex-column justify-content-center align-items-center px-0 py-1">
+  <div style="position: relative;">
+    <h2 class= "Text_title" id="smartDressingTitle" style="color: #0569c8; font-size: 3rem; font-weight:bold; width: 100%; text-align:center;">Smart Dressing <span style="display: none;" id="partialSmartDressing" class="text-danger">partiel <span class="text-primary">(articles <span id="itemsBeginNumber"></span> à <span id="itemsEndNumber"></span>)</span></span></h2>
+  </div>
+
+  <div class="vinzContainer d-flex flex-column justify-content-center align-items-center">
+    <div class="vinzRow mb-2 align-items-center justify-content-center w-100" style="max-width: 810px;">
+      <div class="col-6 col-md-3 mb-1 d-flex justify-content-center">
+        <form class="d-flex" id="searchWordForm">
+          <input type="text" placeholder="Filtrer par mots" name="" class="rounded p-2 ml-3" style="max-width: 150px;">
+          <button type="submit" class="badge badge-success">ok</button>
+        </form>
+      </div>
+
+      <div class="col-6 col-md-3 mb-1 d-flex justify-content-center" >
+        <select id="hashTagSelect" class="custom-select ml-1" style="max-width: 160px;">
+          <option value="">-- Filtrer par # --</option>
+        </select>
+      </div>
+
+      <div class="col-6 col-md-3 d-flex justify-content-center pr-0 align-items-center">
+        <span class="font-weight-bolder h6 ml-2"><u>Tri:</u></span>
+        <select id="orderBySelect" class="custom-select ml-1">
+          <option value="user_updated_at_ts">Par défaut</option>
+          <option value="view_count">👁️ Vues</option>
+          <option value="favourite_count">❤️ Favs</option>
+          <option value="conversations">💬 Convers.</option>
+          <option value="impressions">🖥️ Impress.</option>
+          <option value="price_amount">💲 Prix</option>
+          <option value="created_at_ts">📆 Création</option>
+        </select>
+        <select id="orderSelect" class="custom-select">
+          <option value="desc">⬇️</option>
+          <option value="asc">⬆️</option>
+        </select>
+      </div>
+
+      <div class="col-6 col-md-3 d-flex justify-content-center cursor-pointer" id="toggleFiltersButton">
+        <div class="text-info" id="addFiltersButton">+ Filtres avancés</div>
+        <div class="text-info d-none" id="removeFiltersButton">- de Filtres</div>
+      </div>
+
+
+    </div>
+    <div class="vinzRow mb-2 align-items-center justify-content-center w-100 d-none" id="additionnalFilters" style="max-width: 810px;">
+      <div class="col-6 col-md-3 d-flex justify-content-center">
+        <div class="d-flex dropdown-main flex-column">
+          <div class="d-flex align-items-center cursor-pointer">
+            <div class="d-flex font-weight-bolder align-items-center px-2">
+              <span>Types d'articles (<span id="articleTypeCount">4</span>)</span>
+              <div class="chevron-down"></div>
+            </div>
+          </div>
+          <div class="dropdown-content">
+            <div id="articleTypeForm" class="px-3">
+              <div class="px-2 my-2 d-flex align-items-center">
+                <input checked type="checkbox" id="normalArticlesCheckbox">
+                <label class="text-dark" for="normalArticlesCheckbox">normaux</label>
+              </div>
+              <div class="px-2 my-2 d-flex align-items-center">
+                <input checked type="checkbox" id="reservedArticlesCheckbox">
+                <label class="text-dark" for="reservedArticlesCheckbox">réservés</label>
+              </div>
+              <div class="px-2 my-2 d-flex align-items-center">
+                <input checked type="checkbox" id="hiddenArticlesCheckbox">
+                <label class="text-dark" for="hiddenArticlesCheckbox">masqués</label>
+              </div>
+              <div class="px-2 my-2 d-flex align-items-center">
+                <input checked type="checkbox" id="soldArticlesCheckbox">
+                <label class="text-dark" for="soldArticlesCheckbox">vendus</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 d-flex justify-content-center ">
+        <div class="w-100 border border-grey rounded pl-3 py-2 d-flex align-items-center justify-content-around">
+          <div id="filterIdentifiedOnlyControl" class="custom-control custom-switch ml-n2 ">
+            <input type="checkbox" class="custom-control-input cursor-pointer" id="filterIdentifiedOnly">
+            <label class="custom-control-label align-middle cursor-pointer " for="filterIdentifiedOnly">📛 repérés</label>
+          </div>
+          <img src="" id="question-mark-icon" class="font-icon cursor-pointer">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="vinzRow align-items-center justify-content-center">
+    <div class=""><span id="articleCount" class="font-weight-bolder h5"></span> article(s)</div>
+    <span id= "resetFilters" class="badge badge-danger cursor-pointer mx-3">Reset filtres</span>
+    <span id= "legendButton" class="badge badge-info cursor-pointer">Voir légende</span>
+  </div>
+
+  <div class="vinzRow align-items-center justify-content-center d-none" id="emptyResultsMessage">
+    <div class="h6 mt-3 text-danger font-weight-bolder">= Aucun article ne correspond à vos filtres =</div>
+  </div>
+  
+</div>
